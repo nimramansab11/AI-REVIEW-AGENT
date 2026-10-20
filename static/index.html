@@ -1,0 +1,166 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ReviewAI — Intelligent Content Reviewer</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="brand">
+            <div class="brand-icon">R</div>
+
+            <div>
+                <h1>ReviewAI</h1>
+                <span>LangGraph Review Agent</span>
+            </div>
+        </div>
+
+        <div class="status">
+            <span class="status-dot"></span>
+            AI Agent Online
+        </div>
+    </header>
+
+
+    <main class="container">
+
+        <section class="hero">
+            <div class="hero-badge">
+                ✦ Multi-Agent Intelligence
+            </div>
+
+            <h2>
+                Get a smarter review<br>
+                of your content.
+            </h2>
+
+            <p>
+                ReviewAI uses specialized AI agents to analyze your
+                content, grammar, and structure before producing
+                one comprehensive review.
+            </p>
+        </section>
+
+
+        <section class="workspace">
+
+            <!-- INPUT -->
+            <div class="panel input-panel">
+
+                <div class="panel-header">
+                    <div>
+                        <span class="eyebrow">01 / INPUT</span>
+                        <h3>Your Content</h3>
+                    </div>
+
+                    <span class="counter" id="counter">0 characters</span>
+                </div>
+
+                <textarea
+                    id="content"
+                    placeholder="Paste your essay, paragraph, report, article, or other content here..."
+                ></textarea>
+
+                <div class="input-footer">
+                    <span>
+                        Your content is analyzed by multiple AI reviewers.
+                    </span>
+
+                    <button id="reviewBtn">
+                        <span>Analyze Content</span>
+                        <span class="arrow">→</span>
+                    </button>
+                </div>
+
+            </div>
+
+
+            <!-- AGENT FLOW -->
+            <div class="agent-flow">
+
+                <div class="flow-title">
+                    <span class="eyebrow">02 / AGENT WORKFLOW</span>
+                    <span>LangGraph orchestration</span>
+                </div>
+
+                <div class="agents">
+
+                    <div class="agent">
+                        <div class="agent-number">01</div>
+                        <div>
+                            <strong>Content</strong>
+                            <span>Quality & relevance</span>
+                        </div>
+                    </div>
+
+                    <div class="flow-line"></div>
+
+                    <div class="agent">
+                        <div class="agent-number">02</div>
+                        <div>
+                            <strong>Grammar</strong>
+                            <span>Language & clarity</span>
+                        </div>
+                    </div>
+
+                    <div class="flow-line"></div>
+
+                    <div class="agent">
+                        <div class="agent-number">03</div>
+                        <div>
+                            <strong>Structure</strong>
+                            <span>Organization & flow</span>
+                        </div>
+                    </div>
+
+                    <div class="flow-line"></div>
+
+                    <div class="agent final-agent">
+                        <div class="agent-number">04</div>
+                        <div>
+                            <strong>Final Review</strong>
+                            <span>Unified assessment</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- OUTPUT -->
+            <div class="panel output-panel">
+
+                <div class="panel-header">
+                    <div>
+                        <span class="eyebrow">03 / RESULT</span>
+                        <h3>Review Report</h3>
+                    </div>
+
+                    <button id="clearBtn" class="clear-btn">
+                        Clear
+                    </button>
+                </div>
+
+                <div id="loading" class="loading hidden">
+                    <div class="loader"></div>
+
+                    <div>
+                        <strong>ReviewAI is analyzing...</strong>
+                        <span>Running specialist review agents</span>
+                    </div>
+                </div>
+
+                <div id="emptyState" class="empty-state">
+                    <div class="empty-icon">✦</div>
+
+                    <h4>Your review will appear here</h4>
+
+                    <p>
+                        Add your
